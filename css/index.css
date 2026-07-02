@@ -1,7 +1,3 @@
-/* ==========================
-   RESET
-========================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -14,36 +10,38 @@ body {
     color: #333;
 }
 
-/* ==========================
-   HEADER
-========================== */
-
 header {
     background: #2e7d32;
     color: white;
     text-align: center;
-    padding: 30px;
+    padding: 40px 20px;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 3rem;
+    margin-bottom: 15px;
 }
 
 header p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    background: rgba(255,255,255,0.15);
-    padding: 10px 18px;
-    border-radius: 8px;
-    transition: .3s;
-    display: inline-block;
+    background: rgba(255, 255, 255, 0.18);
+    padding: 12px 24px;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
 nav a:hover {
@@ -51,155 +49,77 @@ nav a:hover {
     color: #2e7d32;
 }
 
-/* ==========================
-   MAIN
-========================== */
-
 main {
     width: 90%;
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 50px auto;
 }
 
-/* ==========================
-   SEÇÕES
-========================== */
+.cards-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: stretch;
+}
 
-section {
+.card-info {
     background: white;
-    padding: 25px;
-    margin-bottom: 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    width: 33.33%;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+    transition: 0.3s;
 }
 
-section h2 {
+.card-info:hover {
+    transform: translateY(-8px);
+}
+
+.card-info h2 {
     color: #2e7d32;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+    font-size: 1.6rem;
 }
 
-/* ==========================
-   INPUT
-========================== */
-
-#campoBusca {
-    width: 70%;
-    padding: 12px;
+.card-info p,
+.card-info li {
     font-size: 16px;
-    border: 1px solid #bbb;
-    border-radius: 8px;
+    line-height: 1.6;
 }
 
-#campoBusca:focus {
-    outline: none;
-    border-color: #2e7d32;
+.card-info ul,
+.card-info ol {
+    padding-left: 22px;
 }
 
-/* ==========================
-   BOTÃO
-========================== */
-
-#botaoBuscar {
-    padding: 12px 22px;
-    background: #2e7d32;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-left: 10px;
-    transition: .3s;
+.card-info li {
+    margin-bottom: 10px;
 }
-
-#botaoBuscar:hover {
-    background: #1b5e20;
-}
-
-/* ==========================
-   MENSAGEM
-========================== */
-
-#mensagem {
-    margin-top: 20px;
-    font-weight: bold;
-    color: #555;
-}
-
-/* ==========================
-   RECEITAS
-========================== */
-
-#areaReceitas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-}
-
-/* Card criado pelo JavaScript */
-
-.card-receita {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 12px rgba(0,0,0,.12);
-    transition: .3s;
-}
-
-.card-receita:hover {
-    transform: translateY(-6px);
-}
-
-.card-receita img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-receita h3 {
-    padding: 15px;
-    color: #2e7d32;
-}
-
-.card-receita p {
-    padding: 0 15px 15px;
-}
-
-.card-receita a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    background: #2e7d32;
-    color: white;
-    padding: 12px;
-    font-weight: bold;
-    transition: .3s;
-}
-
-.card-receita a:hover {
-    background: #1b5e20;
-}
-
-/* ==========================
-   RESPONSIVIDADE
-========================== */
 
 @media (max-width: 768px) {
-
-    #campoBusca {
-        width: 100%;
-        margin-bottom: 15px;
+    header h1 {
+        font-size: 2.2rem;
     }
 
-    #botaoBuscar {
-        width: 100%;
-        margin-left: 0;
+    header p {
+        font-size: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
     }
 
     nav a {
-        width: 220px;
-        margin-bottom: 10px;
+        width: 240px;
+        text-align: center;
     }
 
-    header h1 {
-        font-size: 2rem;
+    .cards-container {
+        flex-direction: column;
+    }
+
+    .card-info {
+        width: 100%;
     }
 }
