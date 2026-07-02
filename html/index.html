@@ -6,26 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chef em Casa</title>
 
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 
 <body>
     <header>
         <h1>Chef em Casa</h1>
-        <p>Busque receitas com base nos ingredientes que você tem.</p>
+        <p>Busque receitas com base nos ingredientes que você tem ou gerencie itens de despensa.</p>
+
         <nav>
             <a href="index.html">Receitas</a>
-            <br><br>
             <a href="lista.html">Lista de Compras</a>
-            <!--Vamos fazer a lista de compras em outro arquivo, para não poluir o index.html -->
         </nav>
     </header>
 
     <main>
         <section>
             <h2>Buscar receitas</h2>
-            <input type="text" id="campoBusca" placeholder="Digite um ingrediente, exemplo: frango">
+
+            <input 
+                type="text" 
+                id="campoBusca" 
+                placeholder="Digite um ingrediente, exemplo: frango"
+            >
+
             <button id="botaoBuscar">Buscar</button>
 
             <p id="mensagem"></p>
@@ -36,11 +41,9 @@
 
             <div id="areaReceitas"></div>
         </section>
-
-
     </main>
-    <script src="../js/receitas.js"></script>
 
+    <script src="../js/receitas.js"></script>
 </body>
 
 </html>
