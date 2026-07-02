@@ -11,39 +11,69 @@
 </head>
 
 <body>
+
     <header>
         <h1>Chef em Casa</h1>
-        <p>Busque receitas com base nos ingredientes que você tem ou gerencie itens de despensa.</p>
+        <p>Encontre receitas com os ingredientes que você já possui e organize sua despensa.</p>
 
         <nav>
-            <a href="index.html">Receitas</a>
-            <a href="lista.html">Lista de Compras</a>
+            <a href="receitas.html">Buscador de Receitas</a>
+            <a href="lista.html">Gerenciador de Despensa</a>
         </nav>
     </header>
 
     <main>
-        <section>
-            <h2>Buscar receitas</h2>
+        <div class="cards-container">
 
-            <input 
-                type="text" 
-                id="campoBusca" 
-                placeholder="Digite um ingrediente, exemplo: frango"
-            >
+            <section class="card-info">
+                <h2>Sobre o Sistema</h2>
+                <p>
+                    O <strong>Chef em Casa</strong> ajuda você a encontrar receitas usando os ingredientes que já tem em casa.
+                </p>
+                <p>
+                    Assim, fica mais fácil aproveitar alimentos, evitar desperdícios e planejar melhor suas refeições.
+                </p>
+            </section>
 
-            <button id="botaoBuscar">Buscar</button>
+            <section class="card-info">
+                <h2>Funcionalidades</h2>
+                <ul>
+                    <li>Buscar receitas por ingrediente</li>
+                    <li>Visualizar receitas encontradas</li>
+                    <li>Gerenciar itens da despensa</li>
+                    <li>Organizar compras</li>
+                </ul>
+            </section>
 
-            <p id="mensagem"></p>
-        </section>
+            <section class="card-info">
+                <h2>Como Utilizar</h2>
+                <ol>
+                    <li>Acesse o Buscador de Receitas</li>
+                    <li>Digite um ingrediente</li>
+                    <li>Escolha uma receita</li>
+                    <li>Organize sua despensa</li>                 
+                </ol>
+            </section>
 
-        <section>
-            <h2>Receitas encontradas</h2>
+        </div>
 
-            <div id="areaReceitas"></div>
-        </section>
+         <div class="cards-container">
+
+            <section class="card-info">
+                <h2>Sobre o Sistema</h2>
+                <p>
+                    O <strong>Chef em Casa</strong> ajuda você a encontrar receitas usando os ingredientes que já tem em casa.
+                </p>
+                <p>
+                    Assim, fica mais fácil aproveitar alimentos, evitar desperdícios e planejar melhor suas refeições.
+                </p>
+            </section>
+
+        </div>
+
+        
     </main>
 
-    <script src="../js/receitas.js"></script>
 </body>
 
 </html>
