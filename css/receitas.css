@@ -1,0 +1,210 @@
+
+* {
+    /* Remove as margens e os espaçamentos automáticos do navegador */
+    margin: 0;
+    padding: 0;
+    /* Garante que bordas e preenchimentos não aumentem o tamanho final da caixa */
+    box-sizing: border-box;
+}
+
+/*  CONFIGURAÇÕES DO CORPO DO SITE (BODY) */
+body {
+    /* Faz a página ocupar no mínimo 100% da altura da tela (Viewport Height) */
+    min-height: 100vh;
+    /* Define o tipo de fonte (se não tiver Arial, usa Helvetica, etc.) */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Fundo com um degradê (gradiente) suave em um ângulo de 135 graus */
+    background: linear-gradient(135deg, #fff7ed, #ffedd5);
+    /* Cor do texto principal (um cinza bem escuro) */
+    color: #2b2b2b;
+}
+
+/*  CABEÇALHO (HEADER)*/
+header {
+
+    background: linear-gradient(135deg, #52cd9e, #0cea3c);
+    color: white;
+    text-align: center;
+    /* Espaçamento interno: 40px em cima/embaixo, 20px nas laterais */
+    padding: 40px 20px;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    /* Adiciona uma sombra preta com 15% de opacidade para dar efeito de flutuação */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.05rem;
+    /* Deixa o texto do subtítulo levemente transparente */
+    opacity: 0.95;
+}
+
+/*   NAVEGAÇÃO (MENU) */
+nav {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    /* Se a tela for pequena, permite que os botões caiam para a linha de baixo */
+    flex-wrap: wrap;
+}
+
+nav a {
+    /* Tira aquele sublinhado feio padrão de links de internet */
+    text-decoration: none;
+    color: #f97316;
+    background: white;
+    padding: 12px 22px;
+    /* Borda 999px garante que os lados fiquem 100% redondos (estilo pílula) */
+    border-radius: 999px;
+    font-weight: bold;
+    /* Deixa as animações (como mudar de cor ao passar o mouse) suaves, demorando 0.3s */
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #ffedd5;
+    /* Empurra o botão 3 pixels para CIMA no eixo Y, criando um efeito de pulinho */
+    transform: translateY(-3px);
+}
+
+/*    ÁREA PRINCIPAL DO CONTEÚDO (MAIN E SECTION) */
+main {
+    /* Define uma largura máxima para o site não esticar infinito em monitores grandes */
+    max-width: 1100px;
+    /* Centraliza o main na tela (margem automática nas laterais) */
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #ea580c; /* Laranja forte */
+    font-size: 1.8rem;
+}
+
+/* CAMPO DE BUSCA E BOTÃO */
+#campoBusca {
+    /* Ocupa toda a largura disponível do seu contêiner */
+    width: 100%;
+    padding: 15px 18px;
+    border: 2px solid #fed7aa;
+    border-radius: 14px;
+    font-size: 1rem;
+    /* Remove a borda preta padrão que os navegadores colocam ao clicar para digitar */
+    outline: none;
+    transition: 0.3s;
+}
+
+/* O :focus é ativado quando o usuário clica dentro do campo para digitar */
+#campoBusca:focus {
+    border-color: #46ba75;
+    /* Cria um "brilho" verde ao redor da caixa de texto */
+    box-shadow: 0 0 0 4px rgba(70, 186, 117, 0.15);
+}
+
+#botaoBuscar {
+    margin-top: 15px;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 14px;
+    /* Fundo com degradê verde */
+    background: linear-gradient(135deg, #389964, #ea580c);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    /* Transforma a setinha do mouse em uma mãozinha indicando que é clicável */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#botaoBuscar:hover {
+    /* Efeito de pulinho para cima e sombra mais forte ao passar o mouse */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(70, 186, 117, 0.35);
+}
+
+#mensagem {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #7c2d12;
+}
+
+/*   LISTAGEM DE RECEITAS (GRID) */
+#areaReceitas {
+    /* Ativa o sistema Grid do CSS */
+    display: grid;
+    /* Mágica da responsividade: cria quantas colunas couberem. 
+       Cada receita terá no mínimo 260px. Se sobrar espaço, divide igualmente (1fr) */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    /* Espaçamento entre os cartões das receitas */
+    gap: 22px;
+}
+
+/* Estilo individual de CADA CARD de receita */
+#areaReceitas div {
+    background: #fff7ed;
+    border-radius: 20px;
+    padding: 18px;
+    border: 1px solid #fed7aa;
+    transition: 0.3s;
+}
+
+#areaReceitas div:hover {
+    /* Efeito de pulinho ao passar o mouse sobre a receita */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+}
+
+#areaReceitas img {
+    /* Faz a foto da receita não vazar para fora do cartão */
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 12px;
+}
+
+#areaReceitas h3 {
+    color: #9a3412;
+    margin-bottom: 10px;
+}
+
+#areaReceitas p {
+    color: #444;
+    /* Aumenta o espaçamento entre as linhas de texto para facilitar a leitura */
+    line-height: 1.5;
+}
+
+/* RESPONSIVIDADE (PARA CELULARES) */
+/* Tudo que estiver aqui dentro SÓ FUNCIONA se a tela tiver até 600px de largura */
+@media (max-width: 600px) {
+    header {
+        /* Diminui o espaço interno do topo e as bordas arredondadas */
+        padding: 30px 15px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+
+    section {
+        padding: 22px;
+    }
+
+    section h2 {
+        font-size: 1.5rem; /* Diminui um pouco o título */
+    }
+
+    nav a {
+        /* Faz os botões do menu ocuparem a tela toda (ficando um embaixo do outro) */
+        width: 100%;
+        text-align: center;
+    }
+}
