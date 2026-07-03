@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef em Casa - Receitas</title>
+
+    <link rel="stylesheet" href="../css/receitas.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Chef em Casa</h1>
+
         <p>Busque receitas com base nos ingredientes que você tem ou gerencie itens de despensa.</p>
 
         <nav>
@@ -7,28 +23,34 @@
     </header>
 
     <main>
-        <section>
+
+        <section class="busca">
+
             <h2>Buscar receitas</h2>
 
-            <input 
-                type="text" 
-                id="campoBusca" 
-                placeholder="Digite um ingrediente, exemplo: frango"
-            >
+            <input
+                type="text"
+                id="campoBusca"
+                placeholder="Digite um ingrediente, exemplo: frango">
 
-            <button id="botaoBuscar">Buscar</button>
+            <button id="botaoBuscar">Buscar Receita</button>
 
             <p id="mensagem"></p>
+
         </section>
 
-        <section>
+        <section class="resultado">
+
             <h2>Receitas encontradas</h2>
 
             <div id="areaReceitas"></div>
+
         </section>
+
     </main>
 
     <script src="../js/receitas.js"></script>
+
 </body>
 
 </html>
