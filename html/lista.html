@@ -1,12 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chef em Casa - Lista de Compras</title>
+
+    <link rel="stylesheet" href="../css/lista.css">
 </head>
+
 <body>
-    <h1>teste
-    </h1>
+
+    <header class="bg-warning text-dark py-4 shadow">
+
+        <div class="container text-center">
+
+            <h1>Chef em Casa</h1>
+
+            <p class="mb-3">
+                Organize sua despensa e controle os ingredientes disponíveis.
+            </p>
+
+            <nav>
+                <a href="index.html" class="btn btn-light me-2">
+                    Receitas
+                </a>
+
+                <a href="lista.html" class="btn btn-dark">
+                    Lista de Compras
+                </a>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main class="container py-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="card shadow">
+
+                    <div class="card-body">
+
+                        <h2 class="mb-4">
+                            Adicionar ingrediente
+                        </h2>
+
+                        <form id="formIngrediente">
+
+                            <div class="mb-3">
+
+                                <label for="inputIngrediente" class="form-label">
+                                    Ingrediente
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="inputIngrediente"
+                                    class="form-control"
+                                    placeholder="Ex.: Arroz"
+                                    required>
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label for="inputQuantidade" class="form-label">
+                                    Quantidade
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="inputQuantidade"
+                                    class="form-control"
+                                    placeholder="Ex.: 2 Kg"
+                                    required>
+
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="btn btn-warning w-100">
+
+                                <i class="bi bi-plus-circle"></i>
+                                Adicionar Item
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <div class="card shadow mt-4">
+
+                    <div class="card-body">
+
+                        <h2 class="mb-4">
+                            Minha Despensa
+                        </h2>
+
+                        <p
+                            id="mensagemVazia"
+                            class="text-center text-muted">
+
+                            Sua despensa está vazia.
+
+                        </p>
+
+                        <ul
+                            id="listaItens"
+                            class="list-group">
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="../js/lista.js"></script>
+
 </body>
+
 </html>
