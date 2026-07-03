@@ -24,7 +24,7 @@ function renderizarLista() {
     // Passa por cada item do array e cria o HTML dele
     meusItens.forEach((item, index) => {
         const li = document.createElement("li");
-        
+
         // Define as classes do Bootstrap para o item da lista
         li.className = "list-group-item d-flex justify-content-between align-items-center";
 
@@ -36,15 +36,25 @@ function renderizarLista() {
         // Monta a estrutura interna do item (Checkbox + Texto + Botão Excluir)
         li.innerHTML = `
             <div class="d-flex align-items-center">
-                <input type="checkbox" class="form-check-input me-3" ${item.comprado ? "checked" : ""} onchange="alternarComprado(${index})">
-                
-                <span class="${item.comprado ? 'text-decoration-line-through text-muted' : ''}">
+
+                <input
+                    type="checkbox"
+                    class="form-check-input me-3"
+                    ${item.comprado ? "checked" : ""}
+                    onchange="alternarComprado(${index})">
+
+                <span class="${item.comprado ? "text-decoration-line-through text-muted" : ""}">
                     <strong>${item.nome}</strong> - <small>${item.quantidade}</small>
                 </span>
+
             </div>
-            
-            <button class="btn btn-sm btn-outline-danger" onclick="excluirItem(${index})">
+
+            <button
+                class="btn btn-sm btn-outline-danger"
+                onclick="excluirItem(${index})">
+
                 <i class="bi bi-trash"></i>
+
             </button>
         `;
 
@@ -60,6 +70,12 @@ formIngrediente.addEventListener("submit", (evento) => {
     // Captura os valores digitados e remove espaços extras com o .trim()
     const nome = inputIngrediente.value.trim();
     const quantidade = inputQuantidade.value.trim();
+
+    // Verifica se os campos foram preenchidos
+    if (nome === "" || quantidade === "") {
+        alert("Preencha o ingrediente e a quantidade.");
+        return;
+    }
 
     // Cria o objeto do novo item
     const novoItem = {
@@ -79,14 +95,16 @@ formIngrediente.addEventListener("submit", (evento) => {
 
     // Limpa os campos do formulário para a próxima digitação
     formIngrediente.reset();
-    inputIngrediente.focus(); // Coloca o cursor de digitação de volta no primeiro campo
+
+    // Coloca o cursor de volta no primeiro campo
+    inputIngrediente.focus();
 });
 
 // 5. Função para marcar/desmarcar o item como comprado
 function alternarComprado(index) {
     // Inverte o valor booleano (se era false vira true, se era true vira false)
     meusItens[index].comprado = !meusItens[index].comprado;
-    
+
     atualizarLocalStorage();
     renderizarLista();
 }
@@ -95,16 +113,16 @@ function alternarComprado(index) {
 function excluirItem(index) {
     // O método splice remove o item baseado na posição (index) dele no array
     meusItens.splice(index, 1);
-    
+
     atualizarLocalStorage();
     renderizarLista();
 }
 
 // 7. Função utilitária para transformar o Array em texto e salvar no localStorage
-function actualizarLocalStorage() {
+function atualizarLocalStorage() {
     localStorage.setItem("itensDespensa", JSON.stringify(meusItens));
 }
 
-// 8. Executa a função pela primeira vez assim que a página abre, 
+// 8. Executa a função pela primeira vez assim que a página abre,
 // para exibir os itens que já estavam salvos anteriormente.
 renderizarLista();
