@@ -16,9 +16,9 @@ function renderizarLista() {
 
     // Controla se exibe a mensagem de "Despensa vazia" ou não
     if (meusItens.length === 0) {
-        mensagemVazia.classList.remove("d-none"); // Mostra a mensagem
+        mensagemVazia.style.display("block"); // Mostra a mensagem
     } else {
-        mensagemVazia.classList.add("d-none"); // Esconde a mensagem
+        mensagemVazia.style.display("none"); // Esconde a mensagem
     }
 
     // Passa por cada item do array e cria o HTML dele
