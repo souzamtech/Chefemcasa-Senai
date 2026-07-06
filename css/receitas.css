@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-
-* {
-    /* Remove as margens e os espaçamentos automáticos do navegador */
-    margin: 0;
-    padding: 0;
-    /* Garante que bordas e preenchimentos não aumentem o tamanho final da caixa */
-    box-sizing: border-box;
-}
-
-/*  CONFIGURAÇÕES DO CORPO DO SITE (BODY) */
-body {
-    /* Faz a página ocupar no mínimo 100% da altura da tela (Viewport Height) */
-    min-height: 100vh;
-    /* Define o tipo de fonte (se não tiver Arial, usa Helvetica, etc.) */
-    font-family: Arial, Helvetica, sans-serif;
-    /* Fundo com um degradê (gradiente) suave em um ângulo de 135 graus */
-    background: linear-gradient(135deg, #fff7ed, #ffedd5);
-    /* Cor do texto principal (um cinza bem escuro) */
-    color: #2b2b2b;
-}
-
-/*  CABEÇALHO (HEADER)*/
-header {
-
-    background: linear-gradient(135deg, #52cd9e, #0cea3c);
-    color: white;
-    text-align: center;
-    /* Espaçamento interno: 40px em cima/embaixo, 20px nas laterais */
-    padding: 40px 20px;
-    border-bottom-left-radius: 35px;
-    border-bottom-right-radius: 35px;
-    /* Adiciona uma sombra preta com 15% de opacidade para dar efeito de flutuação */
-=======
 * {
     margin: 0;
     padding: 0;
@@ -41,258 +7,166 @@ header {
 body {
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #fff7ed, #ffedd5);
-    color: #2e7d32;
+    background: #f4f7f3;
+    color: #333;
 }
 
 header {
-    background: linear-gradient(135deg, #2e7d32, #2e7d32);
+    background: #2e7d32;
     color: white;
     text-align: center;
     padding: 40px 20px;
-    border-bottom-left-radius: 35px;
-    border-bottom-right-radius: 35px;
->>>>>>> bb19f8c6549a6335e8e61c28f2dceea6f9f0d90c
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
 }
 
 header p {
-    margin-top: 10px;
-    font-size: 1.05rem;
-<<<<<<< HEAD
-    /* Deixa o texto do subtítulo levemente transparente */
-    opacity: 0.95;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
 }
 
-/*   NAVEGAÇÃO (MENU) */
-=======
-    opacity: 0.95;
-}
-
->>>>>>> bb19f8c6549a6335e8e61c28f2dceea6f9f0d90c
 nav {
-    margin-top: 25px;
     display: flex;
     justify-content: center;
     gap: 15px;
-<<<<<<< HEAD
-    /* Se a tela for pequena, permite que os botões caiam para a linha de baixo */
-=======
->>>>>>> bb19f8c6549a6335e8e61c28f2dceea6f9f0d90c
     flex-wrap: wrap;
 }
 
 nav a {
-<<<<<<< HEAD
-    /* Tira aquele sublinhado feio padrão de links de internet */
     text-decoration: none;
-    color: #f97316;
-    background: white;
-    padding: 12px 22px;
-    /* Borda 999px garante que os lados fiquem 100% redondos (estilo pílula) */
-    border-radius: 999px;
+    color: white;
     font-weight: bold;
-    /* Deixa as animações (como mudar de cor ao passar o mouse) suaves, demorando 0.3s */
-=======
-    text-decoration: none;
-    color: #2e7d32;
-    background: white;
-    padding: 12px 22px;
-    border-radius: 999px;
-    font-weight: bold;
->>>>>>> bb19f8c6549a6335e8e61c28f2dceea6f9f0d90c
+    background: rgba(255, 255, 255, 0.18);
+    padding: 12px 24px;
+    border-radius: 10px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    background: #ffedd5;
-<<<<<<< HEAD
-    /* Empurra o botão 3 pixels para CIMA no eixo Y, criando um efeito de pulinho */
-    transform: translateY(-3px);
-}
-
-/*    ÁREA PRINCIPAL DO CONTEÚDO (MAIN E SECTION) */
-main {
-    /* Define uma largura máxima para o site não esticar infinito em monitores grandes */
-    max-width: 1100px;
-    /* Centraliza o main na tela (margem automática nas laterais) */
-=======
-    transform: translateY(-3px);
+    background: white;
+    color: #2e7d32;
 }
 
 main {
+    width: 90%;
     max-width: 1100px;
->>>>>>> bb19f8c6549a6335e8e61c28f2dceea6f9f0d90c
-    margin: 40px auto;
-    padding: 0 20px;
+    margin: 50px auto;
 }
 
 section {
     background: white;
     padding: 30px;
     margin-bottom: 30px;
-    border-radius: 24px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
 }
 
 section h2 {
-    margin-bottom: 20px;
-<<<<<<< HEAD
-    color: #ea580c; /* Laranja forte */
-    font-size: 1.8rem;
-}
-
-/* CAMPO DE BUSCA E BOTÃO */
-#campoBusca {
-    /* Ocupa toda a largura disponível do seu contêiner */
-=======
     color: #2e7d32;
-    font-size: 1.8rem;
+    margin-bottom: 22px;
+    font-size: 1.7rem;
 }
 
 #campoBusca {
->>>>>>> bb19f8c6549a6335e8e61c28f2dceea6f9f0d90c
     width: 100%;
-    padding: 15px 18px;
-    border: 2px solid #fed7aa;
-    border-radius: 14px;
+    padding: 13px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
     font-size: 1rem;
-<<<<<<< HEAD
-    /* Remove a borda preta padrão que os navegadores colocam ao clicar para digitar */
-=======
->>>>>>> bb19f8c6549a6335e8e61c28f2dceea6f9f0d90c
     outline: none;
     transition: 0.3s;
 }
 
-<<<<<<< HEAD
-/* O :focus é ativado quando o usuário clica dentro do campo para digitar */
-#campoBusca:focus {
-    border-color: #46ba75;
-    /* Cria um "brilho" verde ao redor da caixa de texto */
-    box-shadow: 0 0 0 4px rgba(70, 186, 117, 0.15);
-=======
 #campoBusca:focus {
     border-color: #2e7d32;
-    box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.15);
->>>>>>> bb19f8c6549a6335e8e61c28f2dceea6f9f0d90c
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
 }
 
 #botaoBuscar {
     margin-top: 15px;
     width: 100%;
-    padding: 15px;
+    padding: 12px 24px;
     border: none;
-    border-radius: 14px;
-<<<<<<< HEAD
-    /* Fundo com degradê verde */
-    background: linear-gradient(135deg, #389964, #ea580c);
+    border-radius: 10px;
+    background: #2e7d32;
     color: white;
     font-size: 1rem;
     font-weight: bold;
-    /* Transforma a setinha do mouse em uma mãozinha indicando que é clicável */
-=======
-    background: linear-gradient(135deg, #2e7d32, #2e7d32);
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
->>>>>>> bb19f8c6549a6335e8e61c28f2dceea6f9f0d90c
     cursor: pointer;
     transition: 0.3s;
 }
 
 #botaoBuscar:hover {
-<<<<<<< HEAD
-    /* Efeito de pulinho para cima e sombra mais forte ao passar o mouse */
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(70, 186, 117, 0.35);
-=======
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(234, 88, 12, 0.35);
->>>>>>> bb19f8c6549a6335e8e61c28f2dceea6f9f0d90c
+    background: #256428;
 }
 
 #mensagem {
     margin-top: 15px;
     font-weight: bold;
-    color: #7c2d12;
+    color: #2e7d32;
 }
 
-<<<<<<< HEAD
-/*   LISTAGEM DE RECEITAS (GRID) */
-#areaReceitas {
-    /* Ativa o sistema Grid do CSS */
-    display: grid;
-    /* Mágica da responsividade: cria quantas colunas couberem. 
-       Cada receita terá no mínimo 260px. Se sobrar espaço, divide igualmente (1fr) */
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    /* Espaçamento entre os cartões das receitas */
-    gap: 22px;
-}
-
-/* Estilo individual de CADA CARD de receita */
-=======
 #areaReceitas {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 22px;
 }
 
->>>>>>> bb19f8c6549a6335e8e61c28f2dceea6f9f0d90c
 #areaReceitas div {
-    background: #fff7ed;
-    border-radius: 20px;
+    background: #f4f7f3;
+    border: 1px solid #dce8da;
+    border-radius: 16px;
     padding: 18px;
-    border: 1px solid #fed7aa;
     transition: 0.3s;
 }
 
 #areaReceitas div:hover {
-<<<<<<< HEAD
-    /* Efeito de pulinho ao passar o mouse sobre a receita */
-=======
->>>>>>> bb19f8c6549a6335e8e61c28f2dceea6f9f0d90c
     transform: translateY(-5px);
     box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
 }
 
 #areaReceitas img {
-<<<<<<< HEAD
-    /* Faz a foto da receita não vazar para fora do cartão */
-=======
->>>>>>> bb19f8c6549a6335e8e61c28f2dceea6f9f0d90c
     width: 100%;
-    border-radius: 16px;
+    border-radius: 14px;
     margin-bottom: 12px;
 }
 
 #areaReceitas h3 {
-    color: #9a3412;
+    color: #2e7d32;
     margin-bottom: 10px;
 }
 
 #areaReceitas p {
     color: #444;
-<<<<<<< HEAD
-    /* Aumenta o espaçamento entre as linhas de texto para facilitar a leitura */
     line-height: 1.5;
 }
 
-/* RESPONSIVIDADE (PARA CELULARES) */
-/* Tudo que estiver aqui dentro SÓ FUNCIONA se a tela tiver até 600px de largura */
-@media (max-width: 600px) {
-    header {
-        /* Diminui o espaço interno do topo e as bordas arredondadas */
-=======
-    line-height: 1.5;
-}
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
 
-@media (max-width: 600px) {
-    header {
->>>>>>> bb19f8c6549a6335e8e61c28f2dceea6f9f0d90c
-        padding: 30px 15px;
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
+    header p {
+        font-size: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 240px;
+        text-align: center;
+    }
+
+    main {
+        width: 92%;
+        margin: 35px auto;
     }
 
     section {
@@ -300,19 +174,6 @@ section h2 {
     }
 
     section h2 {
-<<<<<<< HEAD
-        font-size: 1.5rem; /* Diminui um pouco o título */
-    }
-
-    nav a {
-        /* Faz os botões do menu ocuparem a tela toda (ficando um embaixo do outro) */
-=======
-        font-size: 1.5rem;
-    }
-
-    nav a {
->>>>>>> bb19f8c6549a6335e8e61c28f2dceea6f9f0d90c
-        width: 100%;
-        text-align: center;
+        font-size: 1.4rem;
     }
 }
