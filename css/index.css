@@ -38,10 +38,10 @@ nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    background: rgba(255, 255, 255, 0.18);
+    background: rgba(255,255,255,.18);
     padding: 12px 24px;
     border-radius: 10px;
-    transition: 0.3s;
+    transition: .3s;
 }
 
 nav a:hover {
@@ -55,20 +55,21 @@ main {
     margin: 50px auto;
 }
 
+/* PRIMEIRA LINHA */
+
 .cards-container {
     display: flex;
     gap: 25px;
-    justify-content: center;
-    align-items: stretch;
+    margin-bottom: 30px;
 }
 
 .card-info {
     background: white;
-    width: 33.33%;
+    flex: 1;
     padding: 28px;
     border-radius: 16px;
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
-    transition: 0.3s;
+    box-shadow: 0 8px 22px rgba(0,0,0,.12);
+    transition: .3s;
 }
 
 .card-info:hover {
@@ -78,13 +79,12 @@ main {
 .card-info h2 {
     color: #2e7d32;
     margin-bottom: 18px;
-    font-size: 1.6rem;
 }
 
 .card-info p,
 .card-info li {
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .card-info ul,
@@ -96,30 +96,65 @@ main {
     margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.2rem;
+/* SEGUNDA LINHA (CRIADORES) */
+
+.cards-container:last-of-type {
+    display: block;
+}
+
+.cards-container:last-of-type .card-info {
+    width: 100%;
+}
+
+/* CARD DOS CRIADORES */
+
+.criadores-card h2 {
+    text-align: center;
+}
+
+.criadores-card img {
+    width: 100%;
+    height: auto;
+    max-height: 650px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin: 20px 0 30px;
+}
+
+.criadores-card p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* RESPONSIVO */
+
+@media (max-width:768px){
+
+    header h1{
+        font-size:2.2rem;
     }
 
-    header p {
-        font-size: 1rem;
+    header p{
+        font-size:1rem;
     }
 
-    nav {
-        flex-direction: column;
-        align-items: center;
+    nav{
+        flex-direction:column;
+        align-items:center;
     }
 
-    nav a {
-        width: 240px;
-        text-align: center;
+    nav a{
+        width:240px;
+        text-align:center;
     }
 
-    .cards-container {
-        flex-direction: column;
+    .cards-container{
+        flex-direction:column;
     }
 
-    .card-info {
-        width: 100%;
+    .card-info{
+        width:100%;
     }
+
 }
